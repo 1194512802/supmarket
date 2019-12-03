@@ -1,0 +1,18 @@
+server:
+  port: 7777
+  servlet:
+    context-path: /web
+
+spring:
+  datasource:
+    druid:
+      url: jdbc:mysql://127.0.0.1:3306/nj_1904?serverTimezone=UTC
+      username: root
+      password: 123456
+      driver-class-name: com.mysql.jdbc.Driver
+
+dubbo:
+  application:
+    name: service-web
+  registry:
+    address: zookeeper://127.0.0.1:2181

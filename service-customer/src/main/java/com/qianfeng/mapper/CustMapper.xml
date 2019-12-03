@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qianfeng.mapper.CustMapper">
+
+    <select id="login" resultType="com.qianfeng.entity.CustEntity">
+
+		select * from shop_customer where cname=#{cname} and cpass=#{cpass}
+
+	</select>
+
+	<insert id="register">
+		insert into (cname,caccount,cpass,cemail,cphone) values (#{cname},#{caccount},#{cpass},#{cemail}.#{cphone})
+	</insert>
+</mapper>
